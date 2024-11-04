@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+        @import url('https://use.fontawesome.com/releases/v6.5.2/css/all.css');
+
+        :root {
+            --small-font-size: 1rem;
+            --normal-font-size: 1.3rem;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login {
+            position: relative;
+            height: 100vh;
+            background-image: url('https://codetheworld.io/wp-content/uploads/2024/10/login-bg.png');
+            overflow: hidden;
+            color: white;
+            font-family: 'Poppins';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            position: relative;
+            background-color: #1a1a1a1a;
+            border: 2px solid #ffffff;
+            padding: 2.5rem 1.5rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(8px);
+            min-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        .input-field {
+            position: relative;
+        }
+
+        i {
+            font-size: 1.25rem;
+            position: absolute;
+        }
+
+        .input-field input {
+            width: 100%;
+            padding: 12px 0;
+            background: none;
+            color: white;
+            border: none;
+            font-size: var(--normal-font-size);
+            border-bottom: 1px solid #fff;
+            padding-left: 25px;
+            box-sizing: border-box;
+            position: relative;
+            inset: 0;
+            outline: none;
+            z-index: 1;
+        }
+
+        .input-field label {
+            position: absolute;
+            left: 25px;
+            top: 9px;
+            font-size: var(--normal-font-size);
+            transition:
+                top .3s,
+                font-size .3s;
+        }
+
+        .input-field i {
+            top: 13px;
+        }
+
+        .input-field i.eye {
+            right: 0px;
+        }
+
+        input:focus+label,
+        .input-field input:not(:placeholder-shown)+label {
+            top: -15px;
+            font-size: var(--small-font-size);
+        }
+
+        .check-group,
+        .check-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: var(--small-font-size);
+        }
+
+        input[type="checkbox"] {
+            accent-color: black;
+            transform: scale(1.2);
+            margin-right: 5px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 1rem;
+            border-radius: .5rem;
+            background-color: white;
+            color: black;
+            font-size: var(--normal-font-size);
+            cursor: pointer;
+            border: none;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <form action="">
+            <h1>Login</h1>
+
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="email" required placeholder=" " value="@codetheworld.io">
+                <label>Email</label>
+            </div>
+
+            <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" required placeholder=" ">
+                <label for="login-pass">Password</label>
+                <i class="fa-regular fa-eye-slash eye"></i>
+            </div>
+
+            <div class="check-group">
+                <div class="check-box">
+                    <input type="checkbox" checked>
+                    <label>Remember me</label>
+                </div>
+                <a href="#">Forgot Password?</a>
+            </div>
+
+            <button type="submit">Submit</button>
+
+            <p>
+                Don't have an account? <a href="#">Register</a>
+            </p>
+        </form>
+    </div>
+</body>
+
+</html>
